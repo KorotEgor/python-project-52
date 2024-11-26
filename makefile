@@ -6,3 +6,6 @@ comp_langs:
 
 db:
 	sudo service postgresql start
+
+remake_po:
+	django-admin makemessages --ignore="static" --ignore=".env" -l ru
