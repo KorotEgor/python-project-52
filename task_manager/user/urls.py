@@ -1,8 +1,8 @@
 from django.urls import path
 
-from task_manager.user.views import IndexView, UserFormCreateView
+from task_manager.user.views import ArticleListView
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='user_index'),
-    path('create/', UserFormCreateView.as_view(), name='user_create'),
+    path('', ArticleListView.as_view(), name='users_list'),
+    # path('create/', UserFormCreateView.as_view(), name='user_create'),
 ]

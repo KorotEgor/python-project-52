@@ -1,35 +1,12 @@
-from django.shortcuts import redirect, render
-from django.views import View
-from django.contrib import messages
+from django.views.generic.list import ListView
 
-from task_manager.user.forms import UserForm
-from task_manager.user.models import User
-
-class IndexView(View):
-    def get(self, request):
-        users = User.objects.all()
-        return render(request, "users/index.html", {"users": users})
+from .models import User
 
 
-class UserFormCreateView(View):
-    def get(self, request):
-        form = UserForm()
-        return render(
-            request,
-            'users/create.html',
-            {'form': form},
-        )
+class ArticleListView(ListView):
+    model = User
+    template_name = 'users/users_list.html'
+    context_object_name = 'users'
 
-    def post(self, request):
-        form = UserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.add_message(request, messages.SUCCESS, "Статья создана.")
-            return redirect("user_index")
-
-        messages.add_message(request, messages.WARNING, "Не удалось создать статью.")
-        return render(
-            request,
-            "users/create.html",
-            {"form": form},
-        )
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs)

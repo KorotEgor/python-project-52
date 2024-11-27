@@ -14,17 +14,19 @@
       </tr>
     </thead>
     <tbody>
+      {% for user in users %}
         <tr>
-          <td>id</td>
-          <td>name</td>
-          <td>full name</td>
-          <td>date of creating</td>
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.first_name }} {{ user.last_name }}</td>
+          <td>{{ user.id }}</td>
           <td>
-            <a href="/users/2/update/">{% trans "Change" %}</a>
+            <a href="/users/{{ user.id }}/update/">{% trans "Change" %}</a>
             <br>
-            <a href="/users/2/delete/">{% trans "Delete" %}</a>
+            <a href="/users/{{ user.id }}/delete/">{% trans "Delete" %}</a>
           </td>
         </tr>
+      {% endfor %}
     </tbody>
   </table>
 </div>
