@@ -21,5 +21,6 @@ from task_manager.views import HomePageView
 urlpatterns = [
     path('', HomePageView.as_view(), name='home_page'),
     path('users/', include('task_manager.user.urls')),
+    # path('login/', obj.as_view(), name='login'),
     path('admin/', admin.site.urls),
 ]

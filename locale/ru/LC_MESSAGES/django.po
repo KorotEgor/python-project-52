@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 19:05+0300\n"
+"POT-Creation-Date: 2024-11-27 19:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,11 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task_manager/templates/index.html:9
+#: task_manager/templates/home.html:9
 msgid "Hello, world!"
 msgstr "Привет, мир!"
 
-#: task_manager/templates/index.html:10
+#: task_manager/templates/home.html:10
 msgid "My first django site"
 msgstr "Мой первый сайт на django"
 
@@ -33,7 +33,7 @@ msgid "Task manager"
 msgstr "Менеджер задач"
 
 #: task_manager/templates/layout.html:19
-#: task_manager/templates/users/index.html:5
+#: task_manager/templates/users/users_list.html:5
 msgid "Users"
 msgstr "Пользователи"
 
@@ -59,7 +59,7 @@ msgstr "Фамилия"
 
 #: task_manager/templates/users/create.html:20
 #: task_manager/templates/users/create.html:21
-#: task_manager/templates/users/index.html:10
+#: task_manager/templates/users/users_list.html:10
 msgid "User name"
 msgstr "Имя"
 
@@ -67,7 +67,9 @@ msgstr "Имя"
 msgid ""
 "Required field. No more than 150 characters. Only letters, numbers and "
 "symbols @/./+/-/_."
-msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
+msgstr ""
+"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
+"+/-/_."
 
 #: task_manager/templates/users/create.html:26
 #: task_manager/templates/users/create.html:27
@@ -87,18 +89,22 @@ msgstr "Подтверждение пароля"
 msgid "To confirm, please enter your password again."
 msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
 
-#: task_manager/templates/users/index.html:11
+#: task_manager/templates/users/users_list.html:11
 msgid "Full name"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/index.html:12
+#: task_manager/templates/users/users_list.html:12
 msgid "Created at"
 msgstr "Дата создания"
 
-#: task_manager/templates/users/index.html:23
+#: task_manager/templates/users/users_list.html:24
 msgid "Change"
 msgstr "Изменить"
 
-#: task_manager/templates/users/index.html:25
+#: task_manager/templates/users/users_list.html:26
 msgid "Delete"
 msgstr "Удалить"
+
+#: task_manager/user/views.py:24
+msgid "User successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
