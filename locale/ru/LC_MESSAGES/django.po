@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 20:13+0300\n"
+"POT-Creation-Date: 2024-11-28 21:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,9 +42,21 @@ msgid "Sign in"
 msgstr "Вход"
 
 #: task_manager/templates/layout.html:27
-#: task_manager/templates/users/user_form.html:9 task_manager/user/views.py:24
+#: task_manager/templates/users/register.html:9 task_manager/user/views.py:24
 msgid "Register"
 msgstr "Регистрация"
+
+#: task_manager/templates/users/delete.html:2
+msgid "Deleting a user"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete.html:3
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/templates/users/delete.html:6
+msgid "Yes, delete"
+msgstr "Да, удалить"
 
 #: task_manager/templates/users/users_list.html:10
 msgid "User name"
@@ -74,7 +86,7 @@ msgstr "Пользователь успешно зарегистрирован"
 msgid "You are not authorized! Please log in."
 msgstr "Вы не авторизованы! Пожалуйста, войдите в систему."
 
-#: task_manager/user/views.py:42
+#: task_manager/user/views.py:41
 msgid "You do not have permission."
 msgstr "У вас нет доступа."
 
@@ -88,6 +100,12 @@ msgstr "Изменить"
 #, fuzzy
 #| msgid "User successfully registered"
 msgid "User successfully changed"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/user/views.py:63
+#, fuzzy
+#| msgid "User successfully registered"
+msgid "User successfully deleted"
 msgstr "Пользователь успешно зарегистрирован"
 
 #~ msgid "First name"

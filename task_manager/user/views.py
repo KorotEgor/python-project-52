@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext as _
 from django.contrib import messages
@@ -20,7 +20,7 @@ class UserListView(ListView):
 
 class CreateUserView(SuccessMessageMixin, CreateView):
     form_class = UserCreateForm
-    template_name = "users/user_form.html"
+    template_name = "users/register.html"
     extra_context = {"title": _("Register")}
     # success_url = reverse_lazy('login')
     success_url = "/"
@@ -35,7 +35,7 @@ class AccessCheckMixin:
         if not request.user.is_authenticated:
             text = _("You are not authorized! Please log in.")
             messages.error(request, messages.error(self.request, text))
-            return redirect("user_form")
+            return redirect("register")
 
         elif not self.get_permission():
             text = _("You do not have permission.")
@@ -48,8 +48,16 @@ class AccessCheckMixin:
 class UpdateUserView(SuccessMessageMixin, AccessCheckMixin, UpdateView):
     model = User
     form_class = UserCreateForm
-    template_name = "users/user_form.html"
+    template_name = "users/register.html"
     extra_context = {"title": _("Change user")}
     # success_url = reverse_lazy('users_list')
     success_url = "/users/users_list"
     success_message = _("User successfully changed")
+
+
+class DeleteUserView(SuccessMessageMixin, AccessCheckMixin, DeleteView):
+    model = User
+    template_name = "users/delete.html"
+    # success_url = reverse_lazy('users_list')
+    success_url = "/users/users_list"
+    success_message = _("User successfully deleted")
