@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="container wrapper flex-grow-1">
   <h1 class="my-4">{% trans 'Deleting a user' %}</h1>
   <p>{% trans 'Are you sure you want to delete' %} {{ object }}?</p>
@@ -6,9 +7,3 @@
     <input class="btn btn-danger" type="submit" value="{% trans 'Yes, delete' %}">
   </form>
 </div>
-
-<!-- 
-Удаление пользователя
-Вы уверены, что хотите удалить 12 1?
-Да, удалить
- -->

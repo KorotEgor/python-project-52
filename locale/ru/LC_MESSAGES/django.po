@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 19:15+0300\n"
+"POT-Creation-Date: 2024-11-29 19:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,15 +66,15 @@ msgstr "Вход"
 msgid "Register"
 msgstr "Регистрация"
 
-#: task_manager/templates/users/delete.html:2
+#: task_manager/templates/users/delete.html:3
 msgid "Deleting a user"
 msgstr "Удаление пользователя"
 
-#: task_manager/templates/users/delete.html:3
+#: task_manager/templates/users/delete.html:4
 msgid "Are you sure you want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/templates/users/delete.html:6
+#: task_manager/templates/users/delete.html:7
 msgid "Yes, delete"
 msgstr "Да, удалить"
 
@@ -129,11 +129,17 @@ msgstr "Пользователь успешно зарегистрирован"
 msgid "User successfully deleted"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/views.py:16
+#: task_manager/views.py:17
 #, fuzzy
 #| msgid "You are logged in"
 msgid "You are logged in"
-msgstr "Вы вошли в систему"
+msgstr "Вы залогинились"
+
+#: task_manager/views.py:22 task_manager/views.py:25
+#, fuzzy
+#| msgid "You are logged in"
+msgid "You are logged out"
+msgstr "Вы разлогинены"
 
 #~ msgid "First name"
 #~ msgstr "Имя"
