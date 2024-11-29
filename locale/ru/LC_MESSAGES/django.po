@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 21:10+0300\n"
+"POT-Creation-Date: 2024-11-29 19:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,21 +28,41 @@ msgstr "Привет, мир!"
 msgid "My first django site"
 msgstr "Мой первый сайт на django"
 
-#: task_manager/templates/layout.html:12
+#: task_manager/templates/login.html:5 task_manager/templates/login.html:9
+msgid "Enter"
+msgstr "Вход"
+
+#: task_manager/templates/navbar.html:3
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/layout.html:19
+#: task_manager/templates/navbar.html:10
 #: task_manager/templates/users/users_list.html:5
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/layout.html:24
+#: task_manager/templates/navbar.html:14
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/navbar.html:17
+msgid "Labels"
+msgstr "Метки"
+
+#: task_manager/templates/navbar.html:20
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/navbar.html:25
+msgid "Logout"
+msgstr "Выход"
+
+#: task_manager/templates/navbar.html:30
 msgid "Sign in"
 msgstr "Вход"
 
-#: task_manager/templates/layout.html:27
-#: task_manager/templates/users/register.html:9 task_manager/user/views.py:24
+#: task_manager/templates/navbar.html:33 task_manager/user/views.py:26
+#: task_manager/user/views.py:27
 msgid "Register"
 msgstr "Регистрация"
 
@@ -71,6 +91,7 @@ msgid "Created at"
 msgstr "Дата создания"
 
 #: task_manager/templates/users/users_list.html:24
+#: task_manager/user/views.py:57
 msgid "Change"
 msgstr "Изменить"
 
@@ -78,35 +99,41 @@ msgstr "Изменить"
 msgid "Delete"
 msgstr "Удалить"
 
-#: task_manager/user/views.py:27
+#: task_manager/user/views.py:30
 msgid "User successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/user/views.py:36
+#: task_manager/user/views.py:39
 msgid "You are not authorized! Please log in."
 msgstr "Вы не авторизованы! Пожалуйста, войдите в систему."
 
-#: task_manager/user/views.py:41
+#: task_manager/user/views.py:44
 msgid "You do not have permission."
 msgstr "У вас нет доступа."
 
-#: task_manager/user/views.py:52
+#: task_manager/user/views.py:56
 #, fuzzy
 #| msgid "Change"
 msgid "Change user"
 msgstr "Изменить"
 
-#: task_manager/user/views.py:55
+#: task_manager/user/views.py:60
 #, fuzzy
 #| msgid "User successfully registered"
 msgid "User successfully changed"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/user/views.py:63
+#: task_manager/user/views.py:67
 #, fuzzy
 #| msgid "User successfully registered"
 msgid "User successfully deleted"
 msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/views.py:16
+#, fuzzy
+#| msgid "You are logged in"
+msgid "You are logged in"
+msgstr "Вы вошли в систему"
 
 #~ msgid "First name"
 #~ msgstr "Имя"

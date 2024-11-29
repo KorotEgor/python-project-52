@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from django.shortcuts import redirect
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -21,9 +22,11 @@ class UserListView(ListView):
 class CreateUserView(SuccessMessageMixin, CreateView):
     form_class = UserCreateForm
     template_name = "users/register.html"
-    extra_context = {"title": _("Register")}
-    # success_url = reverse_lazy('login')
-    success_url = "/"
+    extra_context = {
+        "title": _("Register"),
+        "btn_name": _("Register"),
+    }
+    success_url = reverse_lazy("login")
     success_message = _("User successfully registered")
 
 
@@ -49,15 +52,16 @@ class UpdateUserView(SuccessMessageMixin, AccessCheckMixin, UpdateView):
     model = User
     form_class = UserCreateForm
     template_name = "users/register.html"
-    extra_context = {"title": _("Change user")}
-    # success_url = reverse_lazy('users_list')
-    success_url = "/users/users_list"
+    extra_context = {
+        "title": _("Change user"),
+        "btn_name": _("Change"),
+    }
+    success_url = reverse_lazy("users_list")
     success_message = _("User successfully changed")
 
 
 class DeleteUserView(SuccessMessageMixin, AccessCheckMixin, DeleteView):
     model = User
     template_name = "users/delete.html"
-    # success_url = reverse_lazy('users_list')
-    success_url = "/users/users_list"
+    success_url = reverse_lazy("users_list")
     success_message = _("User successfully deleted")
