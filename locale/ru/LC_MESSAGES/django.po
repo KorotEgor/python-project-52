@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-29 19:25+0300\n"
+"POT-Creation-Date: 2024-12-02 18:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,38 @@ msgstr "Вход"
 msgid "Register"
 msgstr "Регистрация"
 
+#: task_manager/templates/statuses/statuses_list.html:5
+#, fuzzy
+#| msgid "Statuses"
+msgid "statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/statuses/statuses_list.html:6
+#, fuzzy
+#| msgid "Created at"
+msgid "Create status"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/statuses_list.html:11
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/templates/statuses/statuses_list.html:12
+#: task_manager/templates/users/users_list.html:12
+msgid "Created at"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/statuses_list.html:23
+#: task_manager/templates/users/users_list.html:24
+#: task_manager/user/views.py:57
+msgid "Change"
+msgstr "Изменить"
+
+#: task_manager/templates/statuses/statuses_list.html:25
+#: task_manager/templates/users/users_list.html:26
+msgid "Delete"
+msgstr "Удалить"
+
 #: task_manager/templates/users/delete.html:3
 msgid "Deleting a user"
 msgstr "Удаление пользователя"
@@ -85,19 +117,6 @@ msgstr "Имя"
 #: task_manager/templates/users/users_list.html:11
 msgid "Full name"
 msgstr "Полное имя"
-
-#: task_manager/templates/users/users_list.html:12
-msgid "Created at"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/users_list.html:24
-#: task_manager/user/views.py:57
-msgid "Change"
-msgstr "Изменить"
-
-#: task_manager/templates/users/users_list.html:26
-msgid "Delete"
-msgstr "Удалить"
 
 #: task_manager/user/views.py:30
 msgid "User successfully registered"
