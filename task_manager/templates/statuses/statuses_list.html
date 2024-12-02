@@ -20,9 +20,9 @@
           <td>{{ status.name }}</td>
           <td>{{ status.created_at }}</td>
           <td>
-            <a href="/statuses/{{ id }}/update/">{% trans 'Change' %}</a>
+            <a href="/statuses/{{ status.id }}/update/">{% trans 'Change' %}</a>
             <br>
-            <a href="/statuses/{{ id }}/delete/">{% trans 'Delete' %}</a>
+            <a href="/statuses/{{ status.id }}/delete/">{% trans 'Delete' %}</a>
           </td>
         </tr>
       {% endfor %}

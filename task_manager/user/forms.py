@@ -3,7 +3,7 @@ from .models import User
 
 
 class UserCreateForm(UserCreationForm):
-    class Meta(UserCreationForm.Meta):
+    class Meta:
         model = User
         fields = [
             'first_name',

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-02 18:13+0300\n"
+"POT-Creation-Date: 2024-12-02 18:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: task_manager/statuses/views.py:24 task_manager/templates/navbar.html:14
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/statuses/views.py:25
+#: task_manager/templates/statuses/statuses_list.html:6
+#, fuzzy
+#| msgid "Created at"
+msgid "Create status"
+msgstr "Дата создания"
+
+#: task_manager/statuses/views.py:28
+#, fuzzy
+#| msgid "User successfully registered"
+msgid "Status successfully created"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/templates/home.html:9
 msgid "Hello, world!"
@@ -41,10 +58,6 @@ msgstr "Менеджер задач"
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/navbar.html:14
-msgid "Statuses"
-msgstr "Статусы"
-
 #: task_manager/templates/navbar.html:17
 msgid "Labels"
 msgstr "Метки"
@@ -66,17 +79,17 @@ msgstr "Вход"
 msgid "Register"
 msgstr "Регистрация"
 
+#: task_manager/templates/statuses/create_status.html:9
+#, fuzzy
+#| msgid "Created at"
+msgid "Create"
+msgstr "Дата создания"
+
 #: task_manager/templates/statuses/statuses_list.html:5
 #, fuzzy
 #| msgid "Statuses"
 msgid "statuses"
 msgstr "Статусы"
-
-#: task_manager/templates/statuses/statuses_list.html:6
-#, fuzzy
-#| msgid "Created at"
-msgid "Create status"
-msgstr "Дата создания"
 
 #: task_manager/templates/statuses/statuses_list.html:11
 msgid "Name"
