@@ -13,7 +13,7 @@ remake_po:
 migrations:
 	uv run manage.py makemigrations
 
-migrate:
+migrate: migrations
 	uv run manage.py migrate
 
 cr_sup_user:
